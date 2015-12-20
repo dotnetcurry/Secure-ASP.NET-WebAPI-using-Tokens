@@ -1,0 +1,60 @@
+﻿<html ng-app="appmodule">
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body ng-controller="emplcontroller">
+    <h1>Employee Information</h1>
+
+    <h2>
+        <span>{{userName}}</span>
+        <input type="button" class="btn" value="logoff" ng-click="logout()"/>
+    </h2>
+
+    <table class="table table-striped table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>EmpNo</th>
+                <th>EmpName</th>
+                <th>Salary</th>
+                <th>DeptName</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="Emp in Employees">
+                <td>
+                    <span>{{Emp.EmpNo}}</span>
+                </td>
+                <td>
+                    <span>{{Emp.EmpName}}</span>
+                </td>
+                <td>
+                    <span>{{Emp.Salary}}</span>
+                </td>
+                <td>
+                    <span>{{Emp.DeptName}}</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <span>{{Message}}</span>
+    </div>
+
+
+
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/MyScripts/Module.js"></script>
+    <script src="~/Scripts/MyScripts/EmpService.js"></script>
+    <script src="~/Scripts/MyScripts/EmployeeController.js"></script>
+
+</body>
+</html>
+
+
+
+
+ 
+ 
+

@@ -11,7 +11,7 @@ app.service('empservice', function ($http) {
 
         var response = $http({
             url: "/api/EmployeeAPI",
-            metod: "GET",
+            method: "GET",
             headers: authHeaders
         });
         return response;
